@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Administración de papelería</title>
+
+</head>
+<body>
+    <section class="form-register">
+    <link rel="stylesheet" href="style.css">
+    <h2>Alta de producto</h2>
+    <form action="alta.php" method="POST">
+        Nombre: <input type="text" name="nombreProducto"><br>
+        Categoría:
+        <select name="categoria">
+            <option value="escritura">Escritura</option>
+            <option value="papel">Papel</option>
+            <option value="organizacion">Organización</option>
+            <option value="adhesivos">Adhesivos</option>
+            <option value="escolares">Escolares</option>
+        </select><br>
+        Marca: <input type="text" name="marca"><br>
+        Unidad: 
+        <select name="unidad">
+            <option value="pieza">Pieza</option>
+            <option value="paquete">Paquete</option>
+        </select><br>
+        Precio Unitario: <input type="number" step="0.01" name="precioUnitario"><br>
+        Stock: <input type="number" name="stock"><br>
+        <input type="submit" value="Guardar">
+    </form>
+
+    <h2>Consultar productos</h2>
+    <form action="consulta.php" method="GET">
+        <input type="submit" value="Ver productos">
+    </form>
+
+    <h2>Eliminar producto</h2>
+    <form action="baja.php" method="POST">
+        ID del producto: <input type="number" name="idProducto"><br>
+        <input type="submit" value="Eliminar">
+    </form>
+
+    <h2>Descontar stock</h2>
+    <form action="descontar_stock.php" method="POST">
+        ID del producto: <input type="number" name="idProducto"><br>
+        Cantidad a descontar: <input type="number" name="cantidad"><br>
+        <input type="submit" value="Descontar">
+    </form>
+</body>
+</html>
